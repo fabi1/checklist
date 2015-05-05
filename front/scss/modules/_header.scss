@@ -1,0 +1,54 @@
+header {
+	
+}
+
+nav{
+	//background-color: $navbg;
+	color: $text-dark;
+	margin: 0 auto;
+	max-width: 760px;
+	padding: 20px 20px 10px 20px;
+	text-align: center;
+	li{
+		display: inline-block;
+		margin-right: 10px;
+	}
+	.list-title{
+		
+		border: none;
+		display: block;
+		margin-bottom: 10px;
+		@include fontsize(1.8);display: none;
+	}
+	a{
+		border: 1px solid lighten($text-dark,40%);
+		display: inline-block;
+		padding: 5px 10px 5px 20px; 
+		position: relative;
+		@include border-radius(20px);
+		@include fontsize(1.4);
+		@include transition(border .4s ease-in-out);
+		&.active{
+			border-color: $active;
+			color: $active;
+			&:before{
+				background-color: $active;
+			}
+		}
+		&:before{
+			background-color: lighten($text-dark,40%);
+			content: "";
+			display: inline-block;
+			height: 10px;
+			left: 7px;
+			position: absolute;
+			top: 7px;
+			width: 10px;
+			@include border-radius(10px);
+			@include transition(background-color .4s ease-in-out);
+		}
+		&:hover,&:focus{
+			border-color: $active;
+		}
+	}
+}

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Front-end checklist</title>
+	<meta name="description" content="" />
+</head>
+<body>
+	<header>
+		<h1>Front-end checklist <span>Quick overview of things you should not forget on your website front-end side</span></h1>
+		<nav>
+			<ul>
+				<li class="list-title">Filter by:</li>
+				<li><a href="#" class="active"></a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">JS</a></li>
+				<li><a href="#">Performance</a></li>
+				<li><a href="#">Accessibility</a></li>
+			</ul>
+		</nav>
+	</header>
+	<form action="" id="checklist">
+		<fieldset>
+			<h2>HTML</h2>	
+			<ul>
+				<li>
+					<input type="checkbox" id="a" />
+					<label for="a"></label>
+				</li>
+			</ul>
+		</fieldset>
+	</form>
+	
+	GLOBAL
+	*favicon
+		A favicon.ico file is at the root of the web folder
+		A set of touch icon is define in the <head> and present into the server
+	* Fonts
+		Webfonts licence is handle
+	* Browsers test/mobile
+		A set a target browsers & devices is define
+		Tests are done!
+	* Share
+		Facebook & twitter metas tags are added on each page
+	*no broken links
+		Broken links are tested
+		http://validator.w3.org/checklink
+		http://iwebtool.com/broken_link_checker
+	* 404
+		a 404 page exist
+
+	HTML
+	*doctype
+		Each page begins with a doctype.
+	*html validator
+		All pages validate throw validator.w3.org (Errors and warnings have to be assumed)
+	*title
+		Each page has a unique comprehensive title
+	*html semantic 
+		markup is correctly write in regards of titles, lists, no table for layout
+	*ID unique
+		In html code, each id attributes are unique
+	*Tables (th, caption...)
+		HTML tables are build in a semantic and accessible way
+	*Forms (label, fieldset...)
+		HTML forms are build in a semantic and accessible way
+
+	CSS
+	*reset
+		Project should begins with a reset or normalize
+	*minification
+		On production, css files are minified.
+	*files structure (sass)
+	*css validator
+		All pages validate throw jigsaw.w3.org (Errors and warnings have to be assumed)
+	*:hover, :focus
+		Mostly, hover declaration should duplicate with focus
+	*avoid !important
+
+	*avoid @import
+
+	JS
+	*concatenation
+		On production, as possible, javascript files are concatenate
+	*minification
+		On production, as possible, javascript files are minified
+	*vendor libraries
+		All vendors libraries
+	
+	IMAGES
+	*retina ready?
+		Are assets ready for retina devices (svg, double size png)
+	*SEO ready names
+		Images with SEO meanings are corectly named (-,_)
+	*No text		
+		Images should not include texts
+	*Weight
+		An optimization tool has been used
+
+	PERFORMANCE
+	*pagespeed test
+		At least one test of performance is done
+	*css head
+		Css files are declared on <head>
+	*js at the bottom
+		As possible, javascript are located at the bottom at each document.
+		=> avoid to block page rendering
+	*no inline script & style
+
+	*img width/height 
+		If images are not resized, indicate width and height attributes
+	*Nb elements DOM
+		Reduce html markup
+		=> Page load & browsers code cross
+	*start render
+	*Gzip
+		Is gzip activated on production ?
+
+	ACCESSIBILITY
+	*img alt
+		Alternative text images 
+	
+	CODE
+	*indentation
+	*double quotes
+
+	<footer>last update: 26/03/2014</footer>
+</body>
+</html>  

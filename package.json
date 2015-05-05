@@ -1,0 +1,36 @@
+{
+  "name": "checklist",
+  "version": "1.0.0",
+  "description": "Front-end checklist",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "~3.8.10",
+    "gulp-batch": "^1.0.5",
+    "gulp-clean": "~0.3.1",
+    "gulp-compass": "~2.0.3",
+    "gulp-imagemin": "~2.2.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "~0.3.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "~1.2.0",
+    "gulp-sass": "~1.2.4",
+    "gulp-uglify": "~1.1.0",
+    "gulp-watch": "~4.0.1",
+    "imagemin-jpegtran": "^4.1.0",
+    "imagemin-pngquant": "~4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabi1/checklist.git"
+  },
+  "author": "Fabien",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabi1/checklist/issues"
+  },
+  "homepage": "https://github.com/fabi1/checklist"
+}

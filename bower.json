@@ -1,0 +1,23 @@
+{
+  "name": "checklist",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fabi1/checklist",
+  "authors": [
+    "Fabien"
+  ],
+  "description": "Front-end checklist",
+  "main": "static/",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components/",
+    "test",
+    "tests"
+  ]
+}

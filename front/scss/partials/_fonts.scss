@@ -1,0 +1,23 @@
+@mixin fontsize($sizeValue: 1.6) {
+  font-size: ($sizeValue * $default-font-size+px);
+  font-size: $sizeValue + rem;
+}
+@mixin lineheight($sizeValue: 1.6) {
+  line-height: ($sizeValue * $default-font-size+px);
+  line-height: $sizeValue + rem;
+}
+
+/*
+	From Google
+	font-family: 'fontname', sans-serif;
+*/
+.roboto,
+body{
+	font-family:'Roboto', Arial, sans-serif; 
+    font-weight: 300;
+}
+
+h1, h2, h3{
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+}
