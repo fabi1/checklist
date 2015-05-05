@@ -1,0 +1,38 @@
+/***********************************************/
+/**********		Colors				  **********/
+/***********************************************/
+/* Base */
+$main: #bdccda;
+$white: #fff;
+$black: #000;
+
+/* Texts */
+$title:			#d31b1b;
+$text-dark: 	#666;
+$text-light: 	#fff;
+$text-gray: 	#a6a6a6;
+$text-unactive:	#bbb;
+
+/* Nav */
+$navbg:		#eee;	
+
+/* Lists */
+$ulbg: 			#fff;	
+$liodd: 		#fff;
+$lihover:		#eee;
+$liborder:		darken($liodd, 10%);
+$active:		#7bc990;
+$unactive:		#d9e8ec;
+
+/***********************************************/
+/**********		Widths				  **********/
+/***********************************************/
+$interface_max_width: 1120px;
+$default-font-size: 10;
+
+/***********************************************/
+/**********		Breakpoints			  **********/
+/***********************************************/
+$breakpoint-large: 900px;
+$breakpoint-medium: 700px;
+$breakpoint-small: 500px;

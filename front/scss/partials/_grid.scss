@@ -1,0 +1,127 @@
+.row {
+	@extend .clearfix;
+	margin: 0 auto;
+    max-width: $interface_max_width;
+    padding: 0 10px;
+    @include box-sizing(border-box);
+    :first-child{
+		margin-left: 0;
+	}
+	.col-centered{
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.row{
+		padding: 0;	
+	}
+}
+
+.col{
+	float: left;
+	margin-left: 1.78%;
+	margin-bottom: 1.78%;
+	@include box-sizing(border-box);
+}
+
+
+@for $i from 1 through 12{
+	.col-#{$i}{
+    	width: (6.70% * $i) + (1.78% * ($i - 1));
+	}
+	// margin offset columns
+	.col-offset-#{$i}{
+		margin-left: (6.70% * $i) + (1.78% * ($i)) !important;
+	}	
+}
+
+@media all and (max-width: #{$breakpoint-small}){
+	.col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-6 .col-4{
+		margin-left: 0;
+		width: 100% !important;
+	}
+	.col-6 + .col-3 {
+		margin-left: 0;
+		& + .col-3 {
+			margin-left: 1.78%;
+		}
+	}
+	.col-3, .col-4{
+		width: (6.70% * 6) + (1.78% * (6 - 1));
+	}
+	.col-3:nth-child(2n+1), .col-4:nth-child(2n+1){
+		margin-left: 0;
+	}
+
+	.col-small-full {
+		width: 100%;
+	}
+	/// V0 HERMOSA ESPERANZA FIX
+	.col-7 + .col-4 {
+		margin-left: 0%;
+		width : 320px;
+	}	
+
+	/// Offset disabled
+	.col-6.col-offset-6 {
+		margin-left: 0 !important;
+	}
+}
+
+@media all and (min-width: #{$breakpoint-small}){
+	@for $i from 1 through 12{
+		// modify source order
+		.col-#{$i}-push{
+			left: (6.70% * $i) + (1.78% * ($i - 1));
+			margin-left: 1.78% !important;
+			position: relative;
+		}
+		.col-#{$i}-pull{
+			right: (6.70% * $i) + (1.78% * ($i));
+			margin-left: 0;
+			position: relative;
+		}
+	}
+}
+
+/*
+	Grid for multiple col-4
+*/
+.col-6 .box-idea {
+	margin: 0 auto;
+}
+.row-idea, .row-push {
+	.col-4:nth-child(3n+4) {
+		margin-left: 0;
+		clear: both;
+	}
+}
+@media all and (max-width: #{$breakpoint-medium}){
+	.row-idea, .row-push {
+		.col-4:nth-child(3n+4){
+			margin-left: 1.78%;
+			clear: none;
+		}
+		.col-4, .col-4  {
+			margin-bottom: 4%;
+			width: 49.11%;
+		}
+		.col-4:nth-child(2n+3) {
+			margin-left: 0;
+			clear: both;
+		}
+	}
+}
+
+@media all and (max-width: #{$breakpoint-small}){
+	.row-idea, .row-push {
+		.col-4, .col-4:nth-child(3n+4) {
+			margin-left: 0;
+			width: 100%;
+		}
+	}
+		
+	.row-idea .box-idea {
+		margin: 0 auto;
+	}
+}

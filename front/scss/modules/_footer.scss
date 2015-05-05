@@ -1,0 +1,11 @@
+footer{
+	line-height: 1.5;
+	padding: 15px 0;
+	text-align: center;
+}
+
+@media all and (max-width: #{$breakpoint-medium}){
+	footer{
+
+	}
+}

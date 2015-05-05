@@ -1,0 +1,29 @@
+.button{
+	border: 1px solid rgba($white, 0.5);
+	cursor: pointer;
+	display: inline-block;
+	line-height: 2.5;
+	margin: 0 10px 10px;
+	padding: 0 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	@include border-radius(4px);
+	@include fontsize(2.2);
+	@include transition(border-color .3s ease-out, background .3s ease-out, color .3s ease-out, opacity .3s ease-out);
+	&:hover, &:focus{
+		border-color: rgba($white, 1);
+	}
+}
+
+.button.half {
+	
+}
+
+.button.full {
+
+}
+
+.button.small {
+
+}

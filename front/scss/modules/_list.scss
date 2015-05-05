@@ -1,0 +1,65 @@
+#checklist{
+	ul{
+		border: 1px solid $liborder;
+		background-color: $ulbg;
+		margin: 0 auto;
+		padding: 0;
+		max-width: 800px;
+	}
+	h2{
+		margin: 0 auto;
+		padding: 30px 20px 20px;
+		max-width: 760px;
+	}
+	li{
+		border-bottom: 1px solid $liborder;
+		color: $text-dark;
+		overflow: hidden;
+		padding: 20px;
+		position: relative;
+		&:nth-child(odd){
+			//background-color: $liodd;
+		}
+		&:hover,&:focus{
+			//background-color: $lihover;
+			box-shadow: inset 0px 0px 15px 0px rgba($lihover,0.7);
+			.utils{
+				opacity: 1;
+				top: 20px;
+			}
+		}
+		&.active, &:active{
+			background-color: $active;
+			color: $white;
+		}
+		&.unactive{
+			background-color: $unactive;
+			color: $text-unactive;
+		}
+		pre{
+			display: inline;
+		}
+	}
+	.utils{
+		opacity: 0;
+		position: absolute;
+		right: 20px;
+		top: -20px;
+		@include transition(top .4s ease-in-out, opacity .8s ease-in-out);
+		a{
+			margin: 0 3px;
+			&:hover{
+				svg[data-icon="circle-na"] path{
+					fill: $unactive;
+				}
+				svg[data-icon="circle-check"] path{
+					fill: $active;
+				}
+			}
+		}
+	}
+	svg path{
+		fill: $text-dark;
+		@include transition(background-color .4s ease-in-out);
+	}
+}
