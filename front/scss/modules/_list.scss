@@ -28,7 +28,7 @@
 				top: 20px;
 			}
 		}
-		&.active, &:active{
+		&.active{
 			background-color: $active;
 			color: $white;
 		}
@@ -48,7 +48,7 @@
 		@include transition(top .4s ease-in-out, opacity .8s ease-in-out);
 		a{
 			margin: 0 3px;
-			&:hover{
+			&:hover, .active{
 				svg[data-icon="circle-na"] path{
 					fill: $unactive;
 				}

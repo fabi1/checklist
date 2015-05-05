@@ -8,6 +8,7 @@ body{
 	color: $main;
 	line-height: 1;
 	overflow-x: hidden;
+	padding: 0 10px;
 }
 @media all and (min-width: #{$breakpoint-medium}){
 	html{

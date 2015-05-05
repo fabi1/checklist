@@ -12,32 +12,32 @@
 		<nav>
 			<ul>
 				<li class="list-title">Filter by</li>
-				<li><a href="#" class="active">Global</a></li>
-				<li><a href="#" class="active">HTML</a></li>
-				<li><a href="#" class="active">CSS</a></li>
-				<li><a href="#" class="active">JS</a></li>
-				<li><a href="#" class="active">Images</a></li>
-				<li><a href="#" class="active">Performance</a></li>
-				<li><a href="#">Accessibility</a></li>
-				<li><a href="#" class="active">Code</a></li>
+				<li><a href="#" class="active" id="l-global">Global</a></li>
+				<li><a href="#" class="active" id="l-html">HTML</a></li>
+				<li><a href="#" class="active" id="l-css">CSS</a></li>
+				<li><a href="#" class="active" id="l-js">JS</a></li>
+				<li><a href="#" class="active" id="l-images">Images</a></li>
+				<li><a href="#" class="active" id="l-performance">Performance</a></li>
+				<li><a href="#" class="active" id="l-accessibility">Accessibility</a></li>
+				<li><a href="#" class="active" id="l-code">Code</a></li>
 			</ul>
 		</nav>
 	</header>
 	<form action="" id="checklist">
-		<fieldset>
+		<fieldset id="f-global">
 			<h2>Global</h2>	
 			<ul>
 				<li>
 					<h3>Favicons (1)</h3>
 					<p>A favicon.ico file is at the root of the web folder</p>
 					<div class="utils">
-						<a href="#">
+						<a href="#" class="bt-na">
 							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-na" viewBox="0 0 16 16">
 								<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
 							  	<text x="3" y="10" font-family="Arial" fill="#ffffff" font-size="6">N/A</text>
 							</svg>
 						</a>
-						<a href="#">
+						<a href="#" class="bt-ok">
 							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-check" viewBox="0 0 16 16">
 							  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm3 4.594l1.406 1.406-5.406 5.406-3.406-3.406 1.406-1.406 2 2 4-4z" />
 							</svg>
@@ -77,7 +77,7 @@
 				</li>
 			</ul>
 		</fieldset>
-		<fieldset>
+		<fieldset id="f-html">
 			<h2>HTML</h2>	
 			<ul>
 				<li>
@@ -110,7 +110,7 @@
 				</li>
 			</ul>
 		</fieldset>
-		<fieldset>
+		<fieldset id="f-css">
 			<h2>CSS</h2>	
 			<ul>
 				<li>
@@ -144,7 +144,7 @@
 			</ul>
 		</fieldset>
 
-		<fieldset>
+		<fieldset id="f-js">
 			<h2>JS</h2>	
 			<ul>
 				<li>
@@ -161,8 +161,8 @@
 				</li>
 			</ul>
 		</fieldset>
-		<fieldset>
-			<h2>IMAGES</h2>	
+		<fieldset id="f-images">
+			<h2>Images</h2>	
 			<ul>
 				<li>
 					<h3>retina ready?</h3>
@@ -182,8 +182,8 @@
 				</li>
 			</ul>
 		</fieldset>
-		<fieldset>
-			<h2>PERFORMANCE</h2>	
+		<fieldset id="f-performance">
+			<h2>Performance</h2>	
 			<ul>
 				<li>
 					<h3>pagespeed test</h3>
@@ -222,8 +222,8 @@
 			</ul>
 		</fieldset>
 		
-		<fieldset>
-			<h2>ACCESSIBILITY</h2>	
+		<fieldset id="f-accessibility">
+			<h2>Accessibility</h2>	
 			<ul>
 				<li>
 					<h3>img alt</h3>
@@ -231,8 +231,8 @@
 				</li>
 			</ul>
 		</fieldset>
-		<fieldset>
-			<h2>CODE</h2>	
+		<fieldset id="f-code">
+			<h2>Code</h2>	
 			<ul>
 				<li>
 					<h3>indentation</h3>
@@ -246,6 +246,6 @@
 		</fieldset>
 	</div>
 	<footer>last update: 05/05/2015<br /><img src="images/ogilvyone.png" alt="ogilvyone Paris" /></footer>
-	<script></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
