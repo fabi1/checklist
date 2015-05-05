@@ -808,6 +808,7 @@ body {
   color: #bdccda;
   line-height: 1;
   overflow-x: hidden;
+  padding: 0 10px;
 }
 
 @media all and (min-width: 700px) {
@@ -951,6 +952,14 @@ ul {
 /* general modules */
 fieldset {
   border: none;
+  opacity: 1;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+fieldset.animhide {
+  opacity: 0;
 }
 
 .button {
@@ -999,6 +1008,7 @@ nav .list-title {
 nav a {
   border: 1px solid #cccccc;
   display: inline-block;
+  margin-bottom: 8px;
   padding: 5px 10px 5px 20px;
   position: relative;
   -moz-border-radius: 20px;
@@ -1014,6 +1024,7 @@ nav a {
 nav a.active {
   border-color: #7bc990;
   color: #7bc990;
+  outline: 0;
 }
 nav a.active:before {
   background-color: #7bc990;
@@ -1071,7 +1082,7 @@ footer {
   opacity: 1;
   top: 20px;
 }
-#checklist li.active, #checklist li:active {
+#checklist li.active {
   background-color: #7bc990;
   color: #fff;
 }
@@ -1095,10 +1106,10 @@ footer {
 #checklist .utils a {
   margin: 0 3px;
 }
-#checklist .utils a:hover svg[data-icon="circle-na"] path {
+#checklist .utils a:hover svg[data-icon="circle-na"] path, #checklist .utils a .active svg[data-icon="circle-na"] path {
   fill: #d9e8ec;
 }
-#checklist .utils a:hover svg[data-icon="circle-check"] path {
+#checklist .utils a:hover svg[data-icon="circle-check"] path, #checklist .utils a .active svg[data-icon="circle-check"] path {
   fill: #7bc990;
 }
 #checklist svg path {

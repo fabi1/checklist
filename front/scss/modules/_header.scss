@@ -14,7 +14,6 @@ nav{
 		margin-right: 10px;
 	}
 	.list-title{
-		
 		border: none;
 		display: block;
 		margin-bottom: 10px;
@@ -23,6 +22,7 @@ nav{
 	a{
 		border: 1px solid lighten($text-dark,40%);
 		display: inline-block;
+		margin-bottom: 8px;
 		padding: 5px 10px 5px 20px; 
 		position: relative;
 		@include border-radius(20px);
@@ -31,6 +31,7 @@ nav{
 		&.active{
 			border-color: $active;
 			color: $active;
+			outline: 0;
 			&:before{
 				background-color: $active;
 			}
