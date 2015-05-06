@@ -11,18 +11,45 @@
 		<h1>Front-end checklist <span>Quick overview of things you should not forget on your website front-end side</span></h1>
 		<nav>
 			<ul>
-				<li class="list-title">Filter by</li>
-				<li><a href="#" class="active" id="l-global">Global</a></li>
-				<li><a href="#" class="active" id="l-html">HTML</a></li>
-				<li><a href="#" class="active" id="l-css">CSS</a></li>
-				<li><a href="#" class="active" id="l-js">JS</a></li>
-				<li><a href="#" class="active" id="l-images">Images</a></li>
-				<li><a href="#" class="active" id="l-performance">Performance</a></li>
-				<li><a href="#" class="active" id="l-accessibility">Accessibility</a></li>
-				<li><a href="#" class="active" id="l-code">Code</a></li>
+				<script id="nav-tpl" type="text/x-handlebars-template">
+					<!--<li class="list-title">Filter by</li>-->
+					{{#each categories}}
+						<li><a href="#" class="active" id="l-{{toLowerCase name}}">{{name}}</a></li>
+					{{/each}}
+				</script>
 			</ul>
 		</nav>
 	</header>
+	<script id="checklist-tpl" type="text/x-handlebars-template">
+		{{#each categories}}
+			<fieldset id="f-{{toLowerCase name}}">
+				<h2>{{name}}</h2>
+				<ul>
+					{{#each details}}
+						<li>
+							<h3>{{title}}</h3>
+							<p>{{desc}}</p>
+							{{#if more}}
+								<div class="more">{{more}}</div>
+							{{/if}}
+							<div class="utils">
+								<a href="#" class="bt-na">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-na" viewBox="0 0 16 16">
+										<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
+									  	<text x="3" y="10" font-family="Arial" fill="#ffffff" font-size="6">N/A</text>
+									</svg>
+								</a>
+								<a href="#" class="bt-ok">
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-check" viewBox="0 0 16 16">
+									  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm3 4.594l1.406 1.406-5.406 5.406-3.406-3.406 1.406-1.406 2 2 4-4z" />
+									</svg>
+								</a>
+							</div>
+						</li>
+					{{/each}}	
+			</fieldset>
+		{{/each}}
+	</script>
 	<form action="" id="checklist">
 		<fieldset id="f-global">
 			<h2>Global</h2>	
@@ -246,6 +273,8 @@
 		</fieldset>
 	</div>
 	<footer>last update: 05/05/2015<br /><img src="images/ogilvyone.png" alt="ogilvyone Paris" /></footer>
+	<script src="datas.json"></script>
+	<script src="js/vendor/handlebars/handlebars.min.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>
