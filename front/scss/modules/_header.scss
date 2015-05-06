@@ -17,7 +17,7 @@ nav{
 		border: none;
 		display: block;
 		margin-bottom: 10px;
-		@include fontsize(1.8);display: none;
+		@include fontsize(1.8);
 	}
 	a{
 		border: 1px solid lighten($text-dark,40%);

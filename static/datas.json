@@ -1,0 +1,243 @@
+var datas = {
+	"categories":
+	[{
+		"name":"Global",
+		"details":[
+			{
+				"title":"Favicons (1)",
+				"desc":"A favicon.ico file is at the root of the web folder",
+				"more":""
+			},
+			{
+				"title":"Favicons (2)",
+				"desc":"A set of touch icon is define in the <head> of the document",
+				"more":""
+			},
+			{
+				"title":"Fonts",
+				"desc":"Webfonts licence is handle",
+				"more":""
+			},
+			{
+				"title":"Browsers tests desktop & mobile",
+				"desc":"A set a target browsers &amp; devices is define",
+				"more":""
+			},
+			{
+				"title":"Browsers tests desktop & mobile (2)",
+				"desc":"Tests are done!",
+				"more":""
+			},
+			{
+				"title":"Share",
+				"desc":"Facebook &amp; twitter metas tags are added on each page",
+				"more":""
+			},
+			{
+				"title":"No broken links",
+				"desc":"Broken links are tested",
+				"more":"http://validator.w3.org/checklink http://iwebtool.com/broken_link_checker"
+			},
+			{
+				"title":"",
+				"desc":"",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "HTML",
+		"details":[
+			{
+				"title":"doctype",
+				"desc":"Each page begins with a doctype.",
+				"more":""
+			},
+			{
+				"title":"html validation",
+				"desc":"All pages validate throw validator.w3.org (Errors and warnings have to be assumed)",
+				"more":""
+			},
+			{
+				"title":"title",
+				"desc":"Each page has a unique comprehensive title",
+				"more":""
+			},
+			{
+				"title":"html semantic",
+				"desc":"markup is correctly write in regards of titles, lists, no table for layout",
+				"more":""
+			},
+			{
+				"title":"unique ID",
+				"desc":"In html code, each id attributes are unique",
+				"more":""
+			},
+			{
+				"title":"Tables (th, caption...)",
+				"desc":"HTML tables are build in a semantic and accessible way",
+				"more":""
+			},
+			{
+				"title":"Forms (label, fieldset...)",
+				"desc":"HTML forms are build in a semantic and accessible way",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "CSS",
+		"details":[
+			{
+				"title":"reset",
+				"desc":"Project should begins with a reset or normalize",
+				"more":""
+			},
+			{
+				"title":"minification",
+				"desc":"On production, css files are minified.",
+				"more":""
+			},
+			{
+				"title":"files structure (sass)",
+				"desc":"",
+				"more":""
+			},
+			{
+				"title":"css validator",
+				"desc":"All pages validate throw jigsaw.w3.org (Errors and warnings have to be assumed)",
+				"more":""
+			},
+			{
+				"title":":hover, :focus",
+				"desc":"Mostly, hover declaration should duplicate with focus",
+				"more":""
+			},
+			{
+				"title":"avoid !important",
+				"desc":"",
+				"more":""
+			},
+			{
+				"title":"avoid @import",
+				"desc":"",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "JS",
+		"details":[
+			{
+				"title":"concatenation",
+				"desc":"On production, as possible, javascript files are concatenate",
+				"more":""
+			},
+			{
+				"title":"minification",
+				"desc":"On production, as possible, javascript files are minified",
+				"more":""
+			},
+			{
+				"title":"vendor libraries",
+				"desc":"",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "Images",
+		"details":[
+			{
+				"title":"retina ready?",
+				"desc":"Are assets ready for retina devices (svg, double size png)",
+				"more":""
+			},
+			{
+				"title":"SEO ready names",
+				"desc":"Images with SEO meanings are corectly named (-,_)",
+				"more":""
+			},
+			{
+				"title":"No text",
+				"desc":"Images should not include texts",
+				"more":""
+			},
+			{
+				"title":"Weight",
+				"desc":"An optimization tool has been used",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "Performance",
+		"details":[
+			{
+				"title":"pagespeed test",
+				"desc":"At least one test of performance is done",
+				"more":""
+			},
+			{
+				"title":"css head",
+				"desc":"Css files are declared on <head>",
+				"more":""
+			},
+			{
+				"title":"js at the bottom",
+				"desc":"As possible, javascript are located at the bottom at each document.",
+				"more":"=> avoid to block page rendering"
+			},
+			{
+				"title":"no inline script & style",
+				"desc":"",
+				"more":""
+			},
+			{
+				"title":"img width/height",
+				"desc":"If images are not resized, indicate width and height attributes",
+				"more":""
+			},
+			{
+				"title":"Nb elements DOM",
+				"desc":"Reduce html markup",
+				"more":"=> Page load & browsers code cross"
+			},
+			{
+				"title":"start render",
+				"desc":"",
+				"more":""
+			},
+			{
+				"title":"Gzip",
+				"desc":"Is gzip activated on production ?",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "Accessibility",
+		"details":[
+			{
+				"title":"mg alt",
+				"desc":"Alternative text images",
+				"more":""
+			}
+		]
+	},
+	{
+		"name": "Code",
+		"details":[
+			{
+				"title":"indentation",
+				"desc":"",
+				"more":""
+			},
+			{
+				"title":"double quotes",
+				"desc":"",
+				"more":""
+			}
+		]
+	}]
+}
