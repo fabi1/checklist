@@ -84,23 +84,38 @@ var datas = {
 		"name": "CSS",
 		"details":[
 			{
+				"title":"styles files",
+				"desc":"Whenever possible, styles are called from external .css files",
+				"more":""
+			},
+			{
 				"title":"reset",
-				"desc":"Project should begins with a reset or normalize",
+				"desc":"Project should begin with a reset or normalize",
 				"more":""
 			},
 			{
 				"title":"minification",
-				"desc":"On production, css files are minified.",
+				"desc":"When online, css files are minified",
 				"more":""
 			},
 			{
-				"title":"files structure (sass)",
-				"desc":"",
+				"title":"css validation",
+				"desc":"All pages are validated through validator. Errors and warnings have to be accepted",
 				"more":""
 			},
 			{
-				"title":"css validator",
-				"desc":"All pages validate throw jigsaw.w3.org (Errors and warnings have to be assumed)",
+				"title":"files structure",
+				"desc":"if justified, a preprocessor (like Sass) is used. The arborescence of the non-compiled files is created with maintainability in mind",
+				"more":""
+			},
+			{
+				"title":"vendor files",
+				"desc":"External files are included in the project only if needed",
+				"more":""
+			},
+			{
+				"title":"Unused CSS",
+				"desc":"Non used scripts should not pollute the code",
 				"more":""
 			},
 			{
@@ -110,12 +125,12 @@ var datas = {
 			},
 			{
 				"title":"avoid !important",
-				"desc":"",
+				"desc":"Whenever possible, !important are not used",
 				"more":""
 			},
 			{
-				"title":"avoid @import",
-				"desc":"",
+				"title":"avoid over-specifying selectors",
+				"desc":"The amount of selectors should be as least as possible",
 				"more":""
 			}
 		]
