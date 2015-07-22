@@ -164,23 +164,23 @@ var datas = {
 		"name": "Images",
 		"details":[
 			{
-				"title":"retina ready?",
-				"desc":"Are assets ready for retina devices (svg, double size png)",
+				"title":"Weight",
+				"desc":"Appropriate file formats are used. An optimization tool has been used to export the image",
+				"more":""
+			}
+			{
+				"title":"retina ready",
+				"desc":"Assets are ready for retina devices display (svg, double size png)",
 				"more":""
 			},
 			{
 				"title":"SEO ready names",
-				"desc":"Images with SEO meanings are corectly named (-,_)",
+				"desc":"Images with SEO meanings are correctly named (-,_)",
 				"more":""
 			},
 			{
 				"title":"No text",
 				"desc":"Images should not include texts",
-				"more":""
-			},
-			{
-				"title":"Weight",
-				"desc":"An optimization tool has been used",
 				"more":""
 			}
 		]
