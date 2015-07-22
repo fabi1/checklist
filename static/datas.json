@@ -4,44 +4,39 @@ var datas = {
 		"name":"Global",
 		"details":[
 			{
-				"title":"Favicons (1)",
-				"desc":"A favicon.ico file is at the root of the web folder",
+				"title":"Favicons",
+				"desc":"A favicon.ico file is located at the root of the web folder",
 				"more":""
 			},
 			{
 				"title":"Favicons (2)",
-				"desc":"A set of touch icon is define in the <head> of the document",
+				"desc":"A set of touch icons is defined in the <head> of the document",
 				"more":""
 			},
 			{
 				"title":"Fonts",
-				"desc":"Webfonts licence is handle",
+				"desc":"The webfonts licences are taken into account and paid if needed",
 				"more":""
 			},
 			{
 				"title":"Browsers tests desktop & mobile",
-				"desc":"A set a target browsers &amp; devices is define",
+				"desc":"A set of supported target browsers & devices is correctly defined",
 				"more":""
 			},
 			{
 				"title":"Browsers tests desktop & mobile (2)",
-				"desc":"Tests are done!",
+				"desc":"QA tests are done",
 				"more":""
 			},
 			{
 				"title":"Share",
-				"desc":"Facebook &amp; twitter metas tags are added on each page",
+				"desc":"Facebook & twitter metas tags are added on each page",
 				"more":""
 			},
 			{
 				"title":"No broken links",
-				"desc":"Broken links are tested",
+				"desc":"There is no broken links",
 				"more":"http://validator.w3.org/checklink http://iwebtool.com/broken_link_checker"
-			},
-			{
-				"title":"",
-				"desc":"",
-				"more":""
 			}
 		]
 	},
