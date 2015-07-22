@@ -20,258 +20,38 @@
 			</ul>
 		</nav>
 	</header>
-	<script id="checklist-tpl" type="text/x-handlebars-template">
-		{{#each categories}}
-			<fieldset id="f-{{toLowerCase name}}">
-				<h2>{{name}}</h2>
-				<ul>
-					{{#each details}}
-						<li>
-							<h3>{{title}}</h3>
-							<p>{{desc}}</p>
-							{{#if more}}
-								<div class="more">{{more}}</div>
-							{{/if}}
-							<div class="utils">
-								<a href="#" class="bt-na">
-									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-na" viewBox="0 0 16 16">
-										<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
-									  	<text x="3" y="10" font-family="Arial" fill="#ffffff" font-size="6">N/A</text>
-									</svg>
-								</a>
-								<a href="#" class="bt-ok">
-									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-check" viewBox="0 0 16 16">
-									  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm3 4.594l1.406 1.406-5.406 5.406-3.406-3.406 1.406-1.406 2 2 4-4z" />
-									</svg>
-								</a>
-							</div>
-						</li>
-					{{/each}}	
-			</fieldset>
-		{{/each}}
-	</script>
 	<form action="" id="checklist">
-		<fieldset id="f-global">
-			<h2>Global</h2>	
-			<ul>
-				<li>
-					<h3>Favicons (1)</h3>
-					<p>A favicon.ico file is at the root of the web folder</p>
-					<div class="utils">
-						<a href="#" class="bt-na">
-							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-na" viewBox="0 0 16 16">
-								<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
-							  	<text x="3" y="10" font-family="Arial" fill="#ffffff" font-size="6">N/A</text>
-							</svg>
-						</a>
-						<a href="#" class="bt-ok">
-							<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-check" viewBox="0 0 16 16">
-							  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm3 4.594l1.406 1.406-5.406 5.406-3.406-3.406 1.406-1.406 2 2 4-4z" />
-							</svg>
-						</a>
-					</div>
-				</li>
-				<li>
-					<h3>Favicons (2)</h3>
-					<p>A set of touch icon is define in the <pre>&lt;head&gt;</pre> and present into the server</p>
-				</li>
-				<li>
-					<h3>Fonts</h3>
-					<p>Webfonts licence is handle</p>
-				</li>
-				<li>
-					<h3>Browsers tests desktop & mobile</h3>
-					<p>A set a target browsers &amp; devices is define</p>
-				</li>
-				<li>
-					<h3>Browsers tests desktop & mobile (2)</h3>
-					<p>Tests are done!</p>
-				</li>
-				<li>
-					<h3>Share</h3>
-					<p>Facebook &amp; twitter metas tags are added on each page</p>
-				</li>
-				
-				<li class="active">
-					<h3>No broken links</h3>
-					<p>Broken links are tested</p>
-					<div class="more">http://validator.w3.org/checklink
-		http://iwebtool.com/broken_link_checker</div>
-				</li>
-	 			<li class="unactive">
-					<h3>404</h3>
-					<p>a 404 page exist</p>
-				</li>
-			</ul>
-		</fieldset>
-		<fieldset id="f-html">
-			<h2>HTML</h2>	
-			<ul>
-				<li>
-					<h3>doctype</h3>
-					<p>Each page begins with a doctype.</p>
-				</li>
-				<li>
-					<h3>html validation</h3>
-					<p>All pages validate throw validator.w3.org (Errors and warnings have to be assumed)</p>
-				</li>
-				<li>
-					<h3>title</h3>
-					<p>Each page has a unique comprehensive title</p>
-				</li>
-				<li>
-					<h3>html semantic</h3>
-					<p>markup is correctly write in regards of titles, lists, no table for layout</p>
-				</li>
-				<li>
-					<h3>unique ID</h3>
-					<p>In html code, each id attributes are unique</p>
-				</li>
-				<li>
-					<h3>Tables (th, caption...)</h3>
-					<p>HTML tables are build in a semantic and accessible way</p>
-				</li>
-				<li>
-					<h3>Forms (label, fieldset...)</h3>
-					<p>HTML forms are build in a semantic and accessible way</p>
-				</li>
-			</ul>
-		</fieldset>
-		<fieldset id="f-css">
-			<h2>CSS</h2>	
-			<ul>
-				<li>
-					<h3>reset</h3>
-					<p>Project should begins with a reset or normalize</p>
-				</li>
-				<li>
-					<h3>minification</h3>
-					<p>On production, css files are minified.</p>
-				</li>
-				<li>
-					<h3>files structure (sass)</h3>
-					<p></p>
-				</li>
-				<li>
-					<h3>css validator</h3>
-					<p>All pages validate throw jigsaw.w3.org (Errors and warnings have to be assumed)</p>
-				</li>
-				<li>
-					<h3>:hover, :focus</h3>
-					<p>Mostly, hover declaration should duplicate with focus</p>
-				</li>
-				<li>
-					<h3>avoid !important</h3>
-					<p></p>
-				</li>
-				<li>
-					<h3>avoid @import</h3>
-					<p></p>
-				</li>
-			</ul>
-		</fieldset>
-
-		<fieldset id="f-js">
-			<h2>JS</h2>	
-			<ul>
-				<li>
-					<h3>concatenation</h3>
-					<p>On production, as possible, javascript files are concatenate</p>
-				</li>
-				<li>
-					<h3>minification</h3>
-					<p>On production, as possible, javascript files are minified</p>
-				</li>
-				<li>
-					<h3>vendor libraries</h3>
-					<p>a</p>
-				</li>
-			</ul>
-		</fieldset>
-		<fieldset id="f-images">
-			<h2>Images</h2>	
-			<ul>
-				<li>
-					<h3>retina ready?</h3>
-					<p>Are assets ready for retina devices (svg, double size png)</p>
-				</li>
-				<li>
-					<h3>SEO ready names</h3>
-					<p>Images with SEO meanings are corectly named (-,_)</p>
-				</li>
-				<li>
-					<h3>No text</h3>
-					<p>Images should not include texts</p>
-				</li>
-				<li>
-					<h3>Weight</h3>
-					<p>An optimization tool has been used</p>
-				</li>
-			</ul>
-		</fieldset>
-		<fieldset id="f-performance">
-			<h2>Performance</h2>	
-			<ul>
-				<li>
-					<h3>pagespeed test</h3>
-					<p>At least one test of performance is done</p>
-				</li>
-				<li>
-					<h3>css head</h3>
-					<p>Css files are declared on <head></p>
-				</li>
-				<li>
-					<h3>js at the bottom</h3>
-					<p>As possible, javascript are located at the bottom at each document.</p>
-					<div class="more">=> avoid to block page rendering</div>
-				</li>
-				<li>
-					<h3>no inline script & style</h3>
-					<p></p>
-				</li>
-				<li>
-					<h3>img width/height </h3>
-					<p>If images are not resized, indicate width and height attributes</p>
-				</li>
-				<li>
-					<h3>Nb elements DOM</h3>
-					<p>Reduce html markup</p>
-					<div class="more">=> Page load & browsers code cross</div>
-				</li>
-				<li>
-					<h3>start render</h3>
-					<p></p>
-				</li>
-				<li>
-					<h3>Gzip</h3>
-					<p>Is gzip activated on production ?</p>
-				</li>
-			</ul>
-		</fieldset>
-		
-		<fieldset id="f-accessibility">
-			<h2>Accessibility</h2>	
-			<ul>
-				<li>
-					<h3>img alt</h3>
-					<p>Alternative text images</p>
-				</li>
-			</ul>
-		</fieldset>
-		<fieldset id="f-code">
-			<h2>Code</h2>	
-			<ul>
-				<li>
-					<h3>indentation</h3>
-					<p></p>
-				</li>
-				<li>
-					<h3>double quotes</h3>
-					<p></p>
-				</li>
-			</ul>
-		</fieldset>
-	</div>
+		<script id="checklist-tpl" type="text/x-handlebars-template">
+			{{#each categories}}
+				<fieldset id="f-{{toLowerCase name}}">
+					<h2>{{name}}</h2>
+					<ul>
+						{{#each details}}
+							<li>
+								<h3>{{title}}</h3>
+								<p>{{desc}}</p>
+								{{#if more}}
+									<div class="more">{{more}}</div>
+								{{/if}}
+								<div class="utils">
+									<a href="#" class="bt-na">
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-na" viewBox="0 0 16 16">
+											<path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8z" />
+										  	<text x="3" y="10" font-family="Arial" fill="#ffffff" font-size="6">N/A</text>
+										</svg>
+									</a>
+									<a href="#" class="bt-ok">
+										<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="32" data-icon="circle-check" viewBox="0 0 16 16">
+										  <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm3 4.594l1.406 1.406-5.406 5.406-3.406-3.406 1.406-1.406 2 2 4-4z" />
+										</svg>
+									</a>
+								</div>
+							</li>
+						{{/each}}	
+				</fieldset>
+			{{/each}}
+		</script>
+	</form>
 	<footer>last update: 05/05/2015<br /><img src="images/ogilvyone.png" alt="ogilvyone Paris" /></footer>
 	<script src="datas.json"></script>
 	<script src="js/vendor/handlebars/handlebars.min.js"></script>
