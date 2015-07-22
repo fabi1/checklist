@@ -45,37 +45,37 @@ var datas = {
 		"details":[
 			{
 				"title":"doctype",
-				"desc":"Each page begins with a doctype.",
+				"desc":"Each page starts with a doctype",
 				"more":""
 			},
 			{
 				"title":"html validation",
-				"desc":"All pages validate throw validator.w3.org (Errors and warnings have to be assumed)",
-				"more":""
+				"desc":"All pages are validated through html validation. Errors and warnings have to be accepted",
+				"more":"http://validator.w3.org"
 			},
 			{
 				"title":"title",
-				"desc":"Each page has a unique comprehensive title",
+				"desc":"Each page has a unique & understandable title",
 				"more":""
 			},
 			{
 				"title":"html semantic",
-				"desc":"markup is correctly write in regards of titles, lists, no table for layout",
+				"desc":"markup is correctly written referring to titles (<h1>, <h2>,...), lists (ul,li,...). No tables are used for layout",
 				"more":""
 			},
 			{
 				"title":"unique ID",
-				"desc":"In html code, each id attributes are unique",
+				"desc":"In html code, each id attribute is unique in the page",
 				"more":""
 			},
 			{
 				"title":"Tables (th, caption...)",
-				"desc":"HTML tables are build in a semantic and accessible way",
+				"desc":"HTML tables are built in a semantic and accessible way (th, caption,...)",
 				"more":""
 			},
 			{
 				"title":"Forms (label, fieldset...)",
-				"desc":"HTML forms are build in a semantic and accessible way",
+				"desc":"HTML forms are built in a semantic and accessible way (label, fieldset,...)",
 				"more":""
 			}
 		]
