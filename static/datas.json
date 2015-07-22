@@ -140,17 +140,22 @@ var datas = {
 		"details":[
 			{
 				"title":"concatenation",
-				"desc":"On production, as possible, javascript files are concatenate",
+				"desc":"When online, if possible, javascript files are concatenated",
 				"more":""
 			},
 			{
 				"title":"minification",
-				"desc":"On production, as possible, javascript files are minified",
+				"desc":"When online, if possible, javascript files are minified",
 				"more":""
 			},
 			{
 				"title":"vendor libraries",
-				"desc":"",
+				"desc":"External files are included in the project only if needed",
+				"more":""
+			},
+			{
+				"title":"unused js",
+				"desc":"Non used scripts should not pollute the code",
 				"more":""
 			}
 		]
