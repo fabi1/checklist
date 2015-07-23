@@ -234,8 +234,8 @@ var datas = {
 		"name": "Accessibility",
 		"details":[
 			{
-				"title":"mg alt",
-				"desc":"Alternative text images",
+				"title":"Image alt attribute",
+				"desc":"All images have an alternative text. The attribute can be empty at some conditions",
 				"more":""
 			}
 		]
@@ -245,12 +245,17 @@ var datas = {
 		"details":[
 			{
 				"title":"indentation",
-				"desc":"",
+				"desc":"Use consistent indentation system in the code",
 				"more":""
 			},
 			{
 				"title":"double quotes",
-				"desc":"",
+				"desc":"Use consistent quotes system in the code",
+				"more":""
+			},
+			{
+				"title":"comments",
+				"desc":"Sufficient comments are produced in the source code",
 				"more":""
 			}
 		]
