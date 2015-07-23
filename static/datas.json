@@ -44,27 +44,27 @@ var datas = {
 		"name": "HTML",
 		"details":[
 			{
-				"title":"doctype",
+				"title":"Doctype",
 				"desc":"Each page starts with a doctype",
 				"more":""
 			},
 			{
-				"title":"html validation",
+				"title":"Html validation",
 				"desc":"All pages are validated through html validation. Errors and warnings have to be accepted",
 				"more":"http://validator.w3.org"
 			},
 			{
-				"title":"title",
+				"title":"Title",
 				"desc":"Each page has a unique & understandable title",
 				"more":""
 			},
 			{
-				"title":"html semantic",
-				"desc":"markup is correctly written referring to titles (<h1>, <h2>,...), lists (ul,li,...). No tables are used for layout",
+				"title":"Html semantic",
+				"desc":"Markup is correctly written referring to titles (<h1>, <h2>,...), lists (ul,li,...). No tables are used for layout",
 				"more":""
 			},
 			{
-				"title":"unique ID",
+				"title":"Unique ID",
 				"desc":"In html code, each id attribute is unique in the page",
 				"more":""
 			},
@@ -84,32 +84,32 @@ var datas = {
 		"name": "CSS",
 		"details":[
 			{
-				"title":"styles files",
+				"title":"Styles files",
 				"desc":"Whenever possible, styles are called from external .css files",
 				"more":""
 			},
 			{
-				"title":"reset",
+				"title":"Reset",
 				"desc":"Project should begin with a reset or normalize",
 				"more":""
 			},
 			{
-				"title":"minification",
+				"title":"Minification",
 				"desc":"When online, css files are minified",
 				"more":""
 			},
 			{
-				"title":"css validation",
+				"title":"Css validation",
 				"desc":"All pages are validated through validator. Errors and warnings have to be accepted",
 				"more":""
 			},
 			{
-				"title":"files structure",
-				"desc":"if justified, a preprocessor (like Sass) is used. The arborescence of the non-compiled files is created with maintainability in mind",
+				"title":"Files structure",
+				"desc":"If justified, a preprocessor (like Sass) is used. The arborescence of the non-compiled files is created with maintainability in mind",
 				"more":""
 			},
 			{
-				"title":"vendor files",
+				"title":"Vendor files",
 				"desc":"External files are included in the project only if needed",
 				"more":""
 			},
@@ -124,12 +124,12 @@ var datas = {
 				"more":""
 			},
 			{
-				"title":"avoid !important",
+				"title":"Avoid !important",
 				"desc":"Whenever possible, !important are not used",
 				"more":""
 			},
 			{
-				"title":"avoid over-specifying selectors",
+				"title":"Avoid over-specifying selectors",
 				"desc":"The amount of selectors should be as least as possible",
 				"more":""
 			}
@@ -139,22 +139,22 @@ var datas = {
 		"name": "JS",
 		"details":[
 			{
-				"title":"concatenation",
+				"title":"Concatenation",
 				"desc":"When online, if possible, javascript files are concatenated",
 				"more":""
 			},
 			{
-				"title":"minification",
+				"title":"Minification",
 				"desc":"When online, if possible, javascript files are minified",
 				"more":""
 			},
 			{
-				"title":"vendor libraries",
+				"title":"Vendor libraries",
 				"desc":"External files are included in the project only if needed",
 				"more":""
 			},
 			{
-				"title":"unused js",
+				"title":"Unused js",
 				"desc":"Non used scripts should not pollute the code",
 				"more":""
 			}
@@ -169,7 +169,7 @@ var datas = {
 				"more":""
 			},
 			{
-				"title":"retina ready",
+				"title":"Retina ready",
 				"desc":"Assets are ready for retina devices display (svg, double size png)",
 				"more":""
 			},
@@ -189,22 +189,22 @@ var datas = {
 		"name": "Performance",
 		"details":[
 			{
-				"title":"css head",
+				"title":"Css head",
 				"desc":"Css files are declared on <head> of the document",
 				"more":""
 			},
 			{
-				"title":"js at the bottom",
+				"title":"Js at the bottom",
 				"desc":"If possible, javascript are located at the bottom of each document",
 				"more":"=> avoid to block page rendering"
 			},
 			{
-				"title":"no inline script & style",
+				"title":"No inline script & style",
 				"desc":"Except single pages, scripts & styles are loaded from external files",
 				"more":""
 			},
 			{
-				"title":"img width/height",
+				"title":"Image width/height",
 				"desc":"Indicate width and height attributes",
 				"more":""
 			},
@@ -244,17 +244,17 @@ var datas = {
 		"name": "Code",
 		"details":[
 			{
-				"title":"indentation",
+				"title":"Indentation",
 				"desc":"Use consistent indentation system in the code",
 				"more":""
 			},
 			{
-				"title":"double quotes",
+				"title":"Double quotes",
 				"desc":"Use consistent quotes system in the code",
 				"more":""
 			},
 			{
-				"title":"comments",
+				"title":"Comments",
 				"desc":"Sufficient comments are produced in the source code",
 				"more":""
 			}
