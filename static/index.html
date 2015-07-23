@@ -27,7 +27,7 @@
 					<h2>{{name}}</h2>
 					<ul>
 						{{#each details}}
-							<li>
+							<li data-pos="{{@index}}">
 								<h3>{{title}}</h3>
 								<p>{{desc}}</p>
 								{{#if more}}
