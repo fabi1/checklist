@@ -167,7 +167,7 @@ var datas = {
 				"title":"Weight",
 				"desc":"Appropriate file formats are used. An optimization tool has been used to export the image",
 				"more":""
-			}
+			},
 			{
 				"title":"retina ready",
 				"desc":"Assets are ready for retina devices display (svg, double size png)",
