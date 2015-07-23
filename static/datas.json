@@ -189,43 +189,43 @@ var datas = {
 		"name": "Performance",
 		"details":[
 			{
-				"title":"pagespeed test",
-				"desc":"At least one test of performance is done",
-				"more":""
-			},
-			{
 				"title":"css head",
-				"desc":"Css files are declared on <head>",
+				"desc":"Css files are declared on <head> of the document",
 				"more":""
 			},
 			{
 				"title":"js at the bottom",
-				"desc":"As possible, javascript are located at the bottom at each document.",
+				"desc":"If possible, javascript are located at the bottom of each document",
 				"more":"=> avoid to block page rendering"
 			},
 			{
 				"title":"no inline script & style",
-				"desc":"",
+				"desc":"Except single pages, scripts & styles are loaded from external files",
 				"more":""
 			},
 			{
 				"title":"img width/height",
-				"desc":"If images are not resized, indicate width and height attributes",
+				"desc":"Indicate width and height attributes",
 				"more":""
 			},
 			{
-				"title":"Nb elements DOM",
-				"desc":"Reduce html markup",
+				"title":"Number of DOM elements",
+				"desc":"Reduce the unnecessary amount of html markups",
 				"more":"=> Page load & browsers code cross"
 			},
 			{
-				"title":"start render",
-				"desc":"",
+				"title":"Test page weight",
+				"desc":"At least one test of performance is done",
+				"more":"=> Page load & browsers code cross"
+			},
+			{
+				"title":"Test start render",
+				"desc":"At least one test of performance is done",
 				"more":""
 			},
 			{
 				"title":"Gzip",
-				"desc":"Is gzip activated on production ?",
+				"desc":"Gzip is activated on the production server",
 				"more":""
 			}
 		]
