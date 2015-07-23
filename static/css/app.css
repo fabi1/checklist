@@ -1105,13 +1105,15 @@ footer {
 #checklist .utils a {
   margin: 0 3px;
 }
-#checklist .utils a:hover svg[data-icon="circle-na"] path, #checklist .utils a .active svg[data-icon="circle-na"] path {
+#checklist .utils a:hover svg[data-icon="circle-na"] path{
   fill: #d9e8ec;
 }
-#checklist .utils a:hover svg[data-icon="circle-check"] path, #checklist .utils a .active svg[data-icon="circle-check"] path {
+#checklist .utils a:hover svg[data-icon="circle-check"] path {
   fill: #7bc990;
 }
-#checklist svg path {
+#checklist svg path,
+#checklist .utils a.active svg[data-icon="circle-na"] path,
+#checklist .utils a.active svg[data-icon="circle-check"] path  {
   fill: #666;
   -moz-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
