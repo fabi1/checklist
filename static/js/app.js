@@ -27,35 +27,94 @@ Handlebars.registerHelper('toLowerCase', function(str) {
 		}, false);
 	});
 
-	// Buttons N/A
-	var btsna = document.querySelectorAll(".bt-na");
-	[].forEach.call(btsna, function(a){
-		a.addEventListener("click", function(e){
-			this.classList.toggle("active");
-			var elparent = this.parentNode.parentNode;
-			if ( (" " + elparent.className + " ").replace(/[\n\t]/g, " ").indexOf(" unactive ") > -1 ){
-				elparent.className = "";
-			} 
-			else{
-				elparent.className = "unactive";
-			}
+	// Event delegation on fieldsets
+	var fieldsets = document.querySelectorAll("fieldset");
+	[].forEach.call(fieldsets, function(fieldset){
+		fieldset.addEventListener("click", function(e){
 			e.preventDefault();
-		}, false);
-	});
-
-	// Buttons Ok
-	var btsok = document.querySelectorAll(".bt-ok");
-	[].forEach.call(btsok, function(a){
-		a.addEventListener("click", function(e){
-			this.classList.toggle("active");
-			var elparent = this.parentNode.parentNode;
-			if ( (" " + elparent.className + " ").replace(/[\n\t]/g, " ").indexOf(" active ") > -1 ){
-				elparent.className = "";
-			} 
-			else{
-				elparent.className = "active";
+			var target = e.target;
+			while(target && target.tagName !== "A"){
+				target = target.parentNode;
 			}
-			e.preventDefault();
+			// stop actions if the target is not <a>
+			if(target==null) return;
+			// Test buttons n/a or ok
+			if(target.classList.contains('bt-na')){
+				clickItem(target, "unactive");
+			}
+			else if(target.classList.contains('bt-ok')){
+				clickItem(target, "active");
+			}	
 		}, false);
 	});
 })();
+
+
+/*
+@params
+	el: 		HTMLElement - a
+	classname: 	String - state to update
+*/
+function clickItem(el, classname){
+	el.classList.toggle("active");
+	var elparent = el.parentNode.parentNode;
+	if ( (" " + elparent.className + " ").replace(/[\n\t]/g, " ").indexOf(" "+classname+" ") > -1 ){
+		elparent.className = "";
+		changePosition(elparent,"default");
+	} 
+	else{
+		elparent.className = classname;
+		changePosition(elparent,classname);
+	}
+}
+/*
+@params
+	el: 	HTMLElement - li
+	type: 	String - item status
+*/
+function changePosition(el, type){
+	var elpos = el.getAttribute("data-pos");
+	var elstarget, eltarget, elindex = -1, loopindex = 0, elnew;
+	var elparent = el.parentNode;
+	var eltarget = elparent.firstChild;
+
+	switch(type){
+		case "default":
+			elstarget = elparent.querySelectorAll("li:not(.active):not(.unactive)");
+			// Nb active elements
+			elindex = elparent.querySelectorAll("li.active").length;
+			console.log(elstarget);
+		break;
+		case "active":
+			elstarget = elparent.querySelectorAll("li.active");
+			elindex = 0;
+		break;
+		case "unactive":
+			elstarget = elparent.querySelectorAll("li.unactive");
+			// Nb active & default
+			elindex = elparent.querySelectorAll("li:not(.unactive)").length;
+		break;
+	}
+	console.log(elindex);
+	[].forEach.call(elstarget, function(elloop, index){
+		if(elpos>elloop.getAttribute("data-pos")){
+			loopindex = index;
+		}
+		else{
+			return;
+		}
+	});
+	elindex += loopindex;
+	// Target item where our item is inserted after
+	eltarget = elparent.querySelectorAll("li")[elindex];
+	// No next silbling if the item in inserted a t the first position
+	eltarget = elindex==0?eltarget:eltarget.nextSibling;
+	if(elindex != -1){
+		// Clone the element
+		elnew = el.cloneNode(true);
+		// Insert the new element / insertAfter
+		elparent.insertBefore(elnew, eltarget);
+		// Remove the old element
+		elparent.removeChild(el);
+	}
+}
