@@ -2,6 +2,18 @@
 Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
+Handlebars.registerHelper("math", function(lvalue, operator, rvalue, options) {
+    lvalue = parseFloat(lvalue);
+    rvalue = parseFloat(rvalue);
+        
+    return {
+        "+": lvalue + rvalue,
+        "-": lvalue - rvalue,
+        "*": lvalue * rvalue,
+        "/": lvalue / rvalue,
+        "%": lvalue % rvalue
+    }[operator];
+});
 
 (function() {
 	// Navigation / Load handlebar template
@@ -49,7 +61,8 @@ Handlebars.registerHelper('toLowerCase', function(str) {
 	});
 })();
 
-
+// To know if the first item is active :/
+var firstItemActive = false;
 /*
 @params
 	el: 		HTMLElement - a
@@ -83,7 +96,6 @@ function changePosition(el, type){
 			elstarget = elparent.querySelectorAll("li:not(.active):not(.unactive)");
 			// Nb active elements
 			elindex = elparent.querySelectorAll("li.active").length;
-			console.log(elstarget);
 		break;
 		case "active":
 			elstarget = elparent.querySelectorAll("li.active");
@@ -95,7 +107,6 @@ function changePosition(el, type){
 			elindex = elparent.querySelectorAll("li:not(.unactive)").length;
 		break;
 	}
-	console.log(elindex);
 	[].forEach.call(elstarget, function(elloop, index){
 		if(elpos>elloop.getAttribute("data-pos")){
 			loopindex = index;
@@ -104,11 +115,15 @@ function changePosition(el, type){
 			return;
 		}
 	});
+	if (elindex==0 && elpos==0 && el.classList.contains("active")) firstItemActive = true;
+	else if (elpos==0) firstItemActive = false;
+	// second item in the list is active while the first is already active
+	if(elindex==0 && elpos==1 && firstItemActive) loopindex = 1;
 	elindex += loopindex;
 	// Target item where our item is inserted after
 	eltarget = elparent.querySelectorAll("li")[elindex];
-	// No next silbling if the item in inserted a t the first position
-	eltarget = elindex==0?eltarget:eltarget.nextSibling;
+	// No next silbling if the first item in inserted at the first position
+	eltarget = (elindex==0)?eltarget:eltarget.nextSibling;
 	if(elindex != -1){
 		// Clone the element
 		elnew = el.cloneNode(true);
