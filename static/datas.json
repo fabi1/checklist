@@ -34,9 +34,31 @@ var datas = {
 				"more":""
 			},
 			{
+				"title":"URL",
+				"desc":"The website address is available with and without 'www'",
+				"more":""
+			},
+
+			{
+				"title":"Languages",
+				"desc":"The language of the page is defined through the lang attribute",
+				"more":""
+			},
+
+			{
+				"title":"Languages (2)",
+				"desc":"For a multi-language website, check the correct display of contents for each version",
+				"more":""
+			},
+			{
 				"title":"No broken links",
 				"desc":"There is no broken links",
 				"more":"http://validator.w3.org/checklink http://iwebtool.com/broken_link_checker"
+			},
+			{
+				"title":"Encoding",
+				"desc":"UTF8 is the preferred way to encode characters",
+				"more":""
 			}
 		]
 	},
@@ -75,7 +97,7 @@ var datas = {
 			},
 			{
 				"title":"Forms (label, fieldset...)",
-				"desc":"HTML forms are built in a semantic and accessible way (label, fieldset,...)",
+				"desc":"HTML forms are built in a semantic and accessible way (label, fieldset...). Items are accessible through keyboard. On mobile, native next/prev and dropdown are used.",
 				"more":""
 			}
 		]
@@ -129,8 +151,28 @@ var datas = {
 				"more":""
 			},
 			{
+				"title":"Selectors",
+				"desc":"Avoid the use of # in css",
+				"more":""
+			},
+			{
+				"title":"Selectors (2)",
+				"desc":"Class names do not refer to the nature of their content but mainly to their roles",
+				"more":""
+			},
+			{
 				"title":"Avoid over-specifying selectors",
 				"desc":"The amount of selectors should be as least as possible",
+				"more":""
+			},
+			{
+				"title":"CSS3",
+				"desc":"Css 3 is better use for animations and to avoid use of images (rounded, shadow...)",
+				"more":""
+			},
+			{
+				"title":"DRY",
+				"desc":"Same portion of code doesn't appear several times in each file.",
 				"more":""
 			}
 		]
@@ -157,6 +199,11 @@ var datas = {
 				"title":"Unused js",
 				"desc":"Non used scripts should not pollute the code",
 				"more":""
+			},
+			{
+				"title":"DRY",
+				"desc":"Same portion of code doesn't appear several times in each file.",
+				"more":""
 			}
 		]
 	},
@@ -180,7 +227,7 @@ var datas = {
 			},
 			{
 				"title":"No text",
-				"desc":"Images should not include texts",
+				"desc":"Images should not include texts. If not possible, use hidden text techniques.",
 				"more":""
 			}
 		]
@@ -236,6 +283,11 @@ var datas = {
 			{
 				"title":"Image alt attribute",
 				"desc":"All images have an alternative text. The attribute can be empty at some conditions",
+				"more":""
+			},
+			{
+				"title":"ARIA",
+				"desc":"if possible, ARIA attributes should be added on advances features, or dynamic contents, especially when using AJAX technology.",
 				"more":""
 			}
 		]
